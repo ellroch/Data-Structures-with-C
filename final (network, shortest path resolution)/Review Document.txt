@@ -1,0 +1,27 @@
+What worked well from the initial design:
+    I did much planning before I did any actual coding, essentially bug-testing in my head before
+    committing the time to put it in code. I think the recursive system worked very well, It saved me
+    a lot of time coding, as well as managing efficiency of the program itself fairly well. Utilizing
+    another structure was the one thing I did not want to resort to - it would take more time to develop
+    a satisfying system, more time to code, and consume more resources... So I think my general approach
+    was pretty good - perhaps that's bias speaking though.
+
+
+what did not work so well:
+    What did not work so well, was primarily the way I wanted to store the path on record. I wanted to store it as a
+    simple string to simplify printing, however I've not used strings in c++ before, and I was having a significant amount
+    of trouble with the char* and combining strings, without having a "\0" null terminator in the middle of the string.
+    I spend some time playing with the std::string type, trying to get that to work, but I just wasn't very familiar and
+    didn't have the time to work out all the kinks. I ended up building another linked list to store the final path,
+    and a matching print function to iterate over it and print as I had wanted. I feel that someone with more experience
+    in c++ would have no trouble doing what I was attempting, however I was not prepared for that specific encounter.
+
+
+Any drastic changes:
+    There were no drastic changes aside from the one mentioned above, changing the way the final path was stored involved a
+    moderate amount of work, building a new structure and the functions to accomodate it -  but nothing too extreme.
+
+
+advice for future attempts:
+    Plan ahead of time. I spent a fair amount of time planning this out on notebook paper before I started coding, and I'm sure that saved
+    me a lot of time not only debugging, but also just writing the core system. 

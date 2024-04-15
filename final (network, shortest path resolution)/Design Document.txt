@@ -1,0 +1,124 @@
+Data Structures and their descriptors:
+    -navigator:
+        the navigator is a structure that stores the target location that we want
+        to end on, as well as the shortest path yet found, and the weight of that path
+        it there will only be one instance of it, declared at the global scope so that
+        the main function can initialize and set it's values, and the recursive
+        function can reference it with each call.
+    -connection_node:
+        the arc-type structure for establishing and navigating the network (or in this case map).
+        Each node should have an arc list consisting of this structure
+    -network_node:
+        the node-structure for establishing and navigating the network (or in this case map)
+        This structure is what the network is made of.
+    -network:
+        A storage structure to hold general network information, including the list of nodes
+        and the total node count - which is used to prevent the recursive list from looping endlessly,
+        the global variable "RecursionDepth" tracks the depth of the recursive tree, if the depth
+        exceeds the value of the node-count then it signals a broken pointer which would enable
+        an infinite loop
+    -path_tree_node:
+        with each iteration of the recursive function another of this structure is spawned.
+        these are linked together to create a record of the current path that the recursive
+        function is working on, so it operates as a single self-adjusted linked list.
+        this node assists with reverse navigating the current path for checking doubles to prevent
+        loops, as well as to trace the path for submission in the case that it is a shorter path.
+        at the end of each called instance of the recursive function, the node is deleted to prevents
+        rampant usage of memory (only one list is alive at any time, which prevents the exponential
+        usage of memory by just leaving things floating, and also prevents storage of redundant information).
+    -nav_path_list:
+        this is the structure that holds the current shortest path, found in the navigator.
+        due to the fact that the path_tree_node structures are frequently generated and deleted
+        there needed to be a more stable way to store the path the recursive function discovered.
+        This structure is the solution to that, forming a linked list in the Navigator.
+        each instance of this in the list points to one node on the network and, if there
+        is another step, the next link in the list.
+
+
+Variables in each structure:
+    -navigator:
+        -  char target_location
+        -  nav_path_list* path;
+        -  int weight;
+    -connection_node:
+        -  network_node* to
+        -  int weight
+        -  connection_node* next_arc
+    -network_node:
+        -  connection_node* connections
+        -  network_node* net_list
+        -  char node_id
+    -network:
+        -  int node_count
+        -  network_node* net_list
+    -path_tree_node:
+        -  path_tree_node* prev;
+        -  int cumulative_weight;
+        -  network_node* net_node;
+        -  path_tree_node* next;
+    -nav_path_list:
+        - network_node* net_node
+        - nav_path_list* next
+
+Functions:
+    init_path_tree_node();
+        return type: void
+        Parameters: path_tree_node
+        waht it does: initializes all internal variables of the structure to NULL, or 0
+    init_nav();
+        return type: void
+        Parameters: none
+        waht it does: initializes the globalscope navigator, setting all internal variables to NULL or 0
+    init_connection_node();
+        return type: void
+        Parameters: connection_node
+        waht it does: initializes all internal variables of the structure to NULL, or 0
+    init_network_node(network_node &node);
+        return type:void
+        Parameters: network_node
+        waht it does: initializes all internal variables of the structure to NULL, or 0
+    init_network();
+        return type:void
+        Parameters:non
+        waht it does:initializes all internal variables of the structure to NULL, or 0
+    print_Net();
+        return type:void
+        Parameters:none
+        waht it does: prints the current state of the network in a list-style graph, noting each node on the network and the status of each of it's connections
+    find_path_from(path_tree_node* curr_point);
+        return type: void
+        Parameters:path_tree_node*
+        waht it does: recursively works out the shortest path to the target noted in the navigator structure, and submits any viable paths
+    clear_path();
+        return type: void
+        Parameters: none
+        waht it does: empties the current path in the navigator structure, deleting all structures in the list and resetting the pointer in the navigator to NULL
+    submit_path(path_tree_node* tree_node);
+        return type:void
+        Parameters: path_tree_node*
+        waht it does: traces the current path discovered by the recursive function and generates a linked list pointed to in the navigator (type "nav_path_list") to retain the path information
+    print_path();
+        return type:void
+        Parameters:none
+        waht it does: prints the path list on record in the navigator
+    find_node();
+        return type:network_node*
+        Parameters: char
+        waht it does: finds a node with a "node_id" matching the character offered in the paraeters and returns a pointer to that node
+    create_arc();
+        return type:connection_node*
+        Parameters:char, int
+        waht it does: it creates an arc pointing to a node identified by the char (uses find_node()) and returns a pointer to an connection_node storing the destination and the weight of the connection
+    reverse_nav();
+        return type:path_tree_node*
+        Parameters: path_tree_node
+        waht it does: given the current node in the recursive tree, this will trace back to the root structure, which is used for a variety of checks, and records.
+    is_repeat();
+        return type: bool
+        Parameters: path_tree_node*
+        waht it does: given the root of the recursive tree, is function will search the current path for an ID matching the char submitted in its parameters, and return true if a match is found- false otherwise.
+    main();
+        return type: int
+        Parameters: none
+        waht it does: builds a static network matching the pre-determined map, requests a user for a starting point and an ending point, and then calculates the shortest path between the two. outputting the path
+                      in plain text, as well as the weight of the path.

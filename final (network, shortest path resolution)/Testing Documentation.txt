@@ -1,0 +1,26 @@
+testing the program:
+  there were not many input requests so teting should be pretty simple
+
+  input requests:
+      Starting Node:
+          expected input: integer between 1-17
+          output cases:
+            integer less than 1:     "ERROR: Your selection was invalid, please select a value between 1 and 17"
+            integer greater than 17: "ERROR: Your selection was invalid, please select a value between 1 and 17"
+            alternative data type:   "ERROR: Your selection was invalid, please select a value between 1 and 17"
+
+          corrective action taken:
+            clear the broken state of the cin function so that it will take input again
+            clear the buffer for the next 100 characters to prevent erronious input on the next call
+
+      Ending Node:
+          expected input: integer between 1-17
+          output cases:
+            integer less than 1:     "ERROR: Your selection was invalid, please select a value between 1 and 17"
+            integer greater than 17: "ERROR: Your selection was invalid, please select a value between 1 and 17"
+            alternative data type:   "ERROR: Your selection was invalid, please select a value between 1 and 17"
+            Ending value matches starting value:"ERROR: Your destination and your starting point are the same. Please select a distinct destination."
+
+          corrective action taken:
+            clear the broken state of the cin function so that it will take input again
+            clear the buffer for the next 100 characters to prevent erronious input on the next call
