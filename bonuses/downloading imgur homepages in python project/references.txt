@@ -1,0 +1,36 @@
+this is a list of every site/forum that helped (in some way,shape, or form) to put this together:
+
+https://www.codecademy.com/en/learn/python
+http://stackoverflow.com/questions/21293336/python-break-out-of-all-loops
+http://stackoverflow.com/questions/1274405/how-to-create-new-folder
+http://ubuntuforums.org/showthread.php?t=1627724
+http://stackoverflow.com/questions/8286352/how-to-save-an-image-locally-using-python-whose-url-address-i-already-know
+http://stackoverflow.com/questions/28017047/how-to-python-mimetypes-guess-type-from-a-file-like-object
+http://stackoverflow.com/questions/3702331/python-test-for-a-url-and-image-type
+http://stackoverflow.com/questions/3042757/downloading-a-picture-via-urllib-and-python
+http://stackoverflow.com/questions/15771424/beautufulsoup-4-findnext-function
+http://www.thegeekstuff.com/2013/06/python-list/
+http://stackoverflow.com/questions/25552315/python-tuple-to-c-array
+http://www.tutorialspoint.com/python/python_reg_expressions.htm
+http://stackoverflow.com/questions/10034377/truncating-a-string-in-python
+http://docs.python-guide.org/en/latest/scenarios/scrape/
+http://stackoverflow.com/questions/499345/regular-expression-to-extract-url-from-an-html-link
+http://stackoverflow.com/questions/4684922/the-best-way-to-search-string-in-beatifulsoup-findalla
+http://stackoverflow.com/questions/8933863/how-to-find-tags-with-only-certain-attributes-beautifulsoup
+http://stackoverflow.com/questions/9801630/what-is-the-difference-between-square-brackets-and-parentheses-in-a-regex
+http://stackoverflow.com/questions/22937618/reference-what-does-this-regex-mean
+http://stackoverflow.com/questions/15771424/beautufulsoup-4-findnext-function
+http://stackoverflow.com/questions/3820666/grabbing-the-href-attribute-of-an-a-element
+http://stackoverflow.com/questions/3754240/declare-function-at-end-of-file-in-python
+http://stackoverflow.com/questions/4258658/python-beautifulsoup-or-lxml-parsing-image-urls-from-html-using-css-tags
+http://stackoverflow.com/questions/5927031/python-get-image-link-from-html
+http://stackoverflow.com/questions/31373019/extractting-image-link-in-python-parsing-xpath
+http://stackoverflow.com/questions/32142869/cant-fetch-the-data-using-beautiful-soup
+http://stackoverflow.com/questions/2571228/python-beautiful-soup-arguments
+http://stackoverflow.com/questions/2571228/python-beautiful-soup-arguments
+https://mail.python.org/pipermail/tutor/2003-July/024206.html
+http://stackoverflow.com/questions/3410206/python-unhashable-type-error
+http://stackoverflow.com/questions/18140865/termination-character-of-string-in-python
+http://stackoverflow.com/questions/6167238/what-does-in-python-mean
+http://stackoverflow.com/questions/17309288/importerror-no-module-named-requests
+http://www.crummy.com/software/BeautifulSoup/bs3/documentation.html#Parsing HTML
